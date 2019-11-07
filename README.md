@@ -13,20 +13,11 @@ $ npm i @zhangfuxing/copydir
 
 ```js
 const copydir = require('@zhangfuxing/copydir');
-const dir = 'xxx';
+const src = './test/src';
+const dest = './test/dest';
 
 (async () => {
-  await copydir(dir);
-})().catch(console.error);
-```  
-
-### use shell by nodejs child_process
-```js
-const copydir = require('@zhangfuxing/copydir/lib/shell');
-const dir = 'xxx';
-
-(async () => {
-  await copydir(dir);
+  await copydir(src, dest);
 })().catch(console.error);
 ```  
 
