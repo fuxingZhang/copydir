@@ -20,7 +20,7 @@ declare function copydir(src: string, dest: string, includeSrc: boolean): Promis
 
 ## Useage  
 
-### use nodejs fs  
+### Doesn't include the source folder
 
 ```js
 const copydir = require('@zhangfuxing/copydir');
@@ -29,6 +29,18 @@ const dest = './test/dest';
 
 (async () => {
   await copydir(src, dest);
+})().catch(console.error);
+```  
+
+### Including the source folder
+
+```js
+const copydir = require('@zhangfuxing/copydir');
+const src = './test/src';
+const dest = './test/dest';
+
+(async () => {
+  await copydir(src, dest, true);
 })().catch(console.error);
 ```  
 
