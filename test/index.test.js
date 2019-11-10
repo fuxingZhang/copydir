@@ -6,7 +6,7 @@ describe('#indexOf()', function () {
   const dest = './test/dest';
   const destIncludeSrc = './test/dest_src';
  
-  it('copydir should ok', async () => {
+  it('copydir includeSrc equal false should ok', async () => {
     try {
       await copydir(src, dest);
     } catch (error) {
@@ -14,7 +14,7 @@ describe('#indexOf()', function () {
     }
   });
 
-  it('copydir should ok', async () => {
+  it('copydir includeSrc equal true should ok', async () => {
     try {
       await copydir(src, destIncludeSrc, true);
     } catch (error) {
