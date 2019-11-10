@@ -2,9 +2,10 @@
 
 /**
  * copy files from one directory to another
- *   - `src` folder where all files are located
+ *   - `src` source directory
  *   - `dest` destination directory
+ *   - `includeSrc` Whether to include the source folder, default: false
  */
-declare function copydir(src: string, dest: string): Promise<void>
+declare function copydir(src: string, dest: string, includeSrc: boolean): Promise<void>
 
 export = copydir
